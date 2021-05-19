@@ -1,0 +1,11 @@
+.filterContainer {
+  width: 100%;
+  max-width: 20rem;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .filterContainer {
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,30 @@
+.gameListOverviewContainer {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.searchAndFilterContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 4rem;
+  /* margin-bottom: 4rem; */
+}
+
+@media screen and (max-width: 768px){
+  .searchAndFilterContainer {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .searchAndFilterContainer{
+    padding: 0 1rem;
+  }
+}

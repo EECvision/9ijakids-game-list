@@ -1,0 +1,33 @@
+.listContainer {
+  background: white;
+  padding: 0 1.5rem;
+  border-radius: 0.3rem;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+.listContainer > ul > li {
+  margin-bottom: 1rem;
+}
+
+.listContainer h3, li {
+  cursor: pointer;
+  transition: font-weight 0.1s;
+}
+
+.listContainer li:hover {
+  font-weight: bold;
+}
+
+.listContainer h3 {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.subTitle {
+  font-size: 0.9rem;
+  margin-left: 2rem;
+  font-weight: normal;
+}
