@@ -40,7 +40,7 @@ const FilterDropdown = ({ groups, levels, setFilter, setSearch, toggleFilter, is
     }
   }
 
-  const handleFilter = () => {
+  const handleToggleFilter = () => {
     toggleFilter(!isToggleFilter);
     setSearch('');
   }
@@ -52,13 +52,13 @@ const FilterDropdown = ({ groups, levels, setFilter, setSearch, toggleFilter, is
 
   return (
     <div className={styles.listContainer}>
-      <h3 onClick={handleFilter} >Filter By: <span className={styles.subTitle}>{filterValue ? filterValue : '--'}</span> </h3>
+      <h3 onClick={handleToggleFilter} >Filter By: <span className={styles.subTitle}>{filterValue ? filterValue : '--'}</span> </h3>
       <animated.ul style={{ height: z.to(z => `${z}rem`), overflow: 'hidden' }}>
         <li onClick={handleX} >Groups</li>
         <animated.ul style={{ height: x.to(x => `${x}rem`), overflow: 'hidden' }}>
           {
             [...groups].map((group, idx) => (
-              <li key={idx} onClick={() => setFilter(group)}>{group}</li>
+              <li key={idx} onClick={() =>{setFilter(group); toggleFilter(false)}}>{group}</li>
             ))
           }
         </animated.ul>
@@ -66,7 +66,7 @@ const FilterDropdown = ({ groups, levels, setFilter, setSearch, toggleFilter, is
         <animated.ul style={{ height: y.to(y => `${y}rem`), overflow: 'hidden' }}>
           {
             [...levels].map((level, idx) => (
-              <li key={idx} onClick={() => setFilter(level)}>{level}</li>
+              <li key={idx} onClick={() =>{setFilter(level); toggleFilter(false)}}>{level}</li>
             ))
           }
         </animated.ul>
